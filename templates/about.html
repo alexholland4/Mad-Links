@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/white_madlinks_logo.png') }}" alt="MadLinks Logo">
+                </a>
+            </div>
+            <nav>
+                <a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">Home</a>
+                <a href="{{ url_for('about') }}" class="{% if request.endpoint == 'about' %}active{% endif %}">About & Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="about-container">
+        <section class="about-section">
+            <h2>About</h2>
+            <p>MadLinks is a small project created by a UW-Madison senior named <a href="https://alexholland.tech" target="_blank">Alex Holland</a> with the goal of consolidating all the best helpful campus links in one easy place. I hope these links are as helpful for you as they were for me!</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Feedback</h2>
+            <p>Do you have issues, questions, or suggestions regarding the website? Feel free to reach out to me via email at <a href="mailto:hello@alexholland.tech">hello@alexholland.tech</a> as I am sure there are awesome features yet to add and plenty of bugs to fix.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Advertisements</h2>
+            <p>Hosting this website costs money: server costs, domain fees, and engineering efforts. Looking to become a sponsor of the site? Feel free to reach out. <br>Additionally, we are always happy to link out to support other quality student projects.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="ad-space">
+            <p>Ad space available here.</p>
+        </div>
+        <p>Created by <a href="https://www.alexholland.tech" target="_blank">Alex Holland</a></p>
+        <p>This project is open source. Check it out on <a href="https://github.com/alexholland4" target="_blank">GitHub</a> 🤓</p>
+        <p>Feel free to contact us if you have any questions or suggestions. Email <a href="mailto:hello@alexholland.tech">here</a>📧</p>
+        <p>If this site was helpful, please consider <a href="https://www.buymeacoffee.com/alexholland" target="_blank">buying me a coffee</a>☕️</p>
+        <p>Not Affiliated with UW-Madison</p>
+    </footer>
+</body>
+</html>

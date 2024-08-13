@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Resource Links</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/white_madlinks_logo.png') }}" alt="MadLinks Logo">
+                </a>
+            </div>
+            <nav>
+                <a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">Home</a>
+                <a href="{{ url_for('about') }}" class="{% if request.endpoint == 'about' %}active{% endif %}">About & Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- New Site Title Section -->
+    <section class="site-info">
+        <h1>MadLinks</h1>
+        <p>Your one-stop curated repository for all the essential links you need as a student. <br>From class enrollment to housing and time-saving utilities, we’ve got you covered.</p>
+    </section>
+
+    <div class="container">
+        {% for category, links in links.items() %}
+        <section>
+            <h2>{{ category }}</h2>
+            <div class="links">
+                {% for link in links %}
+                <a class="link-item" href="{{ link.url }}" target="_blank">
+                    <img src="{{ link.image }}" alt="{{ link.title }}">
+                    <h3>{{ link.title }}</h3>
+                    <p>{{ link.description }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <div class="ad-space">
+            <!-- Placeholder for an ad -->
+            <p>Ad space available here.</p>
+        </div>
+        <p>Created by <a href="https://www.alexholland.tech" target="_blank">Alex Holland</a></p>
+        <p>This project is open source. Check it out on <a href="https://github.com/alexholland4" target="_blank">GitHub</a> 🤓</p>
+        <p>Feel free to contact us if you have any questions or suggestions. Email <a href="mailto:hello@alexholland.tech">here</a>📧</p>
+        <p>If this site was helpful, please consider <a href="https://www.buymeacoffee.com/alexholland" target="_blank">buying me a coffee</a>☕️</p>
+        <p>Not Affiliated with UW-Madison</p>
+    </footer>
+</body>
+</html>
