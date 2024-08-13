@@ -32,7 +32,7 @@ def index():
         'Housing': [
             {
                 'title': 'MadHousing',
-                'url': 'https:/madhousing.com',
+                'url': 'https://madhousing.com',
                 'description': 'View dorm rankings from your fellow students.',
                 'image': 'static/images/madhousing_logo.png'
             },
@@ -70,13 +70,13 @@ def index():
         'All-Campus Clubs': [
             {
                 'title': 'NAMI UW',
-                'url': 'https://www.instagram.com/badnewsbadgers/',
+                'url': 'https://www.namiuw.org/',
                 'description': 'A student organization dedicated to promoting mental health and fighting the stigma against mental illness through education, advocacy and support',
                 'image': 'static/images/nami_logo.png'
             },
             {
                 'title': 'Student Leadership Program',
-                'url': 'https://www.instagram.com/badgerbarstool/',
+                'url': 'https://slp.cfli.wisc.edu/',
                 'description': 'Work towards a leadership minor while developing effective and essential leadership skills through comprehensive leadership education and diverse experiences',
                 'image': 'static/images/slp_logo.png'
             },
