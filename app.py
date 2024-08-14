@@ -17,7 +17,7 @@ def index():
             },
             {
                 'title': 'MadCal',
-                'url': 'https://madgrades.com',
+                'url': 'https://schedule-maker-411505.uc.r.appspot.com/',
                 'description': 'Automatically add your class schedule to Google Calendar or Outlook',
                 'image': 'static/images/madcal_logo.png'
             },
@@ -26,7 +26,13 @@ def index():
                 'url': 'https://enrollbadge.com',
                 'description': 'Receive notifications when your desired classes become open or waitlisted',
                 'image': 'static/images/enrollbadge_logo.png'
-            }
+            },
+            {
+                'title': 'RateMyProfessors',
+                'url': 'https://www.ratemyprofessors.com/search/professors/18418?q=*',
+                'description': 'View ratings of professors from your fellow students',
+                'image': 'static/images/ratemyprofessors_logo.jpg'
+            },
             # Add more links as needed
         ],
         'Housing': [
