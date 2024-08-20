@@ -1,4 +1,5 @@
-# Mad Links
+# madlinks.co
+
 Your one-stop curated repository for all the essential links you need as a UW-Madison student.
 From class enrollment to housing and time-saving utilities, we’ve got you covered.
 
